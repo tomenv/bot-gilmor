@@ -1,6 +1,7 @@
 import streamlit as st
 import google.generativeai as gen_ai
 
+
 def home_screen():
     st.title("Welocome to Bot Gilmor")
     options = ["LORELAI", "RORI", "EMILY", "RICHARD", "LUKE"]
@@ -62,11 +63,6 @@ def next_screen():
         # st.write(f"You selected: {st.session_state.selected_option}")
 
 def main():
-    st.set_page_config(
-    page_title="Chat with Gemini-Pro!",
-    page_icon=":banana:",  # Favicon emoji
-    layout="centered",  # Page layout option
-    )
     if 'next_screen' not in st.session_state:
         st.session_state.next_screen = False
 
