@@ -1,7 +1,3 @@
-%%writefile app.py
-import streamlit as st
-import google.generativeai as gen_ai
-
 
 def home_screen():
     st.title("Welocome to Bot Gilmor")
@@ -64,6 +60,9 @@ def next_screen():
         # st.write(f"You selected: {st.session_state.selected_option}")
 
 def main():
+    import streamlit as st
+    import google.generativeai as gen_ai
+    %%writefile app.py
     st.set_page_config(
     page_title="Chat with Gemini-Pro!",
     page_icon=":banana:",  # Favicon emoji
