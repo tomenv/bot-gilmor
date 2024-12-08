@@ -63,7 +63,7 @@ def next_screen():
         # st.write(f"You selected: {st.session_state.selected_option}")
 
 def main():
-    print(st.secrets)
+    st.write(st.secrets))
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
     # Set up Google Gemini-Pro AI model
     gen_ai.configure(api_key=GOOGLE_API_KEY)
