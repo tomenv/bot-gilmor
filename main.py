@@ -14,7 +14,7 @@ def home_screen():
             st.warning("Please select an option.")
 
 def next_screen():
-    GOOGLE_API_KEY = 'AIzaSyDIcTp_F1Y0az8_FjFETf1hS7uaQx4sbog'
+    GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
     # Set up Google Gemini-Pro AI model
     gen_ai.configure(api_key=GOOGLE_API_KEY)
     model = gen_ai.GenerativeModel('gemini-pro')
