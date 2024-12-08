@@ -14,10 +14,10 @@ def home_screen():
             st.warning("Please select an option.")
 
 def next_screen():
-    # GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
-    # # Set up Google Gemini-Pro AI model
-    # gen_ai.configure(api_key=GOOGLE_API_KEY)
-    # model = gen_ai.GenerativeModel('gemini-pro')
+    GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+    # Set up Google Gemini-Pro AI model
+    gen_ai.configure(api_key=GOOGLE_API_KEY)
+    model = gen_ai.GenerativeModel('gemini-pro')
 
     # Configure Streamlit page settings
     st.set_page_config(
@@ -63,10 +63,6 @@ def next_screen():
         # st.write(f"You selected: {st.session_state.selected_option}")
 
 def main():
-    GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
-    # Set up Google Gemini-Pro AI model
-    gen_ai.configure(api_key=GOOGLE_API_KEY)
-    model = gen_ai.GenerativeModel('gemini-pro')
     if 'next_screen' not in st.session_state:
         st.session_state.next_screen = False
 
