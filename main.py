@@ -13,7 +13,7 @@ def home_screen():
     st.title("Welocome to Bot Gilmor")
     options = ["LORELAI", "RORI", "EMILY", "RICHARD", "LUKE"]
     selected_option = st.selectbox("Who do you want to talk to:", options)
-    file_path = '/mount/src/bot-gilmor/data/se_1_ep_1.txt''
+    file_path = '/mount/src/bot-gilmor/data/se_1_ep_1.txt'
     import os
     st.write(os.getcwd())
     transcript = read_transcript(file_path)
