@@ -2,6 +2,11 @@ import streamlit as st
 import google.generativeai as gen_ai
 
 
+def read_transcript(file_path):
+    with open(file_path, 'r') as file:
+        text = file.read()
+    return text
+
 def home_screen():
     st.title("Welocome to Bot Gilmor")
     options = ["LORELAI", "RORI", "EMILY", "RICHARD", "LUKE"]
