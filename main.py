@@ -3,6 +3,8 @@ import google.generativeai as gen_ai
 
 
 def read_transcript(file_path):
+    import os
+    st.write(os.getcwd())
     with open(file_path, 'r') as file:
         text = file.read()
     return text
@@ -11,7 +13,7 @@ def home_screen():
     st.title("Welocome to Bot Gilmor")
     options = ["LORELAI", "RORI", "EMILY", "RICHARD", "LUKE"]
     selected_option = st.selectbox("Who do you want to talk to:", options)
-    file_path = '../data/se_1_ep_1.txt'  
+    file_path = '/data/se_1_ep_1.txt'  
     transcript = read_transcript(file_path)
     st.write(transcript) 
     if st.button("Continue"):
