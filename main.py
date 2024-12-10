@@ -12,6 +12,9 @@ def home_screen():
             st.session_state.next_screen = True
         else:
             st.warning("Please select an option.")
+    file_path = '../se_1_ep_1.txt'  
+    transcript = read_transcript(file_path)
+    st.write(transcript) 
 
 def next_screen():
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
