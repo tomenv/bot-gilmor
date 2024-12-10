@@ -6,15 +6,16 @@ def home_screen():
     st.title("Welocome to Bot Gilmor")
     options = ["LORELAI", "RORI", "EMILY", "RICHARD", "LUKE"]
     selected_option = st.selectbox("Who do you want to talk to:", options)
+    file_path = '../se_1_ep_1.txt'  
+    transcript = read_transcript(file_path)
+    st.write(transcript) 
     if st.button("Continue"):
         if selected_option:
             st.session_state.selected_option = selected_option
             st.session_state.next_screen = True
         else:
             st.warning("Please select an option.")
-    file_path = '../se_1_ep_1.txt'  
-    transcript = read_transcript(file_path)
-    st.write(transcript) 
+
 
 def next_screen():
     GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
